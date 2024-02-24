@@ -1,0 +1,103 @@
+{
+  "services": [
+    {
+      "topic": "1. Consultation",
+      "image": "https://t4.ftcdn.net/jpg/05/31/01/29/240_F_531012995_eHfqtOwUMewFquhK0TbCqojNtDrxQPPq.jpg",
+      "description": {
+        "paragraph1": "Our Services refyn data is a leading IT Staffing Augmentation and IT Consulting Solutions company with value-priced services for Government and private  clients. Our Consultants have the right technical skills and business knowledge needed in their field coupled with insights about the Project environment. Business Analysis Nanda Technologies Business Analysis takes a pragmatic, face-to-face approach, performing research and analysis through observation, interviews, design workshops and focus groups. This kind of adaptive, business-focused method coupled with project management and a strong development team ensures customer satisfaction and project success.",
+        "paragraph2": "Refyn Data Technologies provides expert Business Analysts who are equipped with the right business acumen to understand objectives at the highest level in order to elicit and create the requirements for the successful development of a software solution.",
+        "paragraph3": "Our consultants work closely with all project stakeholders, conducting on-site studies to map and prioritize the capabilities of your enterprise as well as to chart its flow of information. They also lead in-depth focus groups with business users to understand how their internal systems can better suit their needs for efficiency."
+      },
+      "points": [
+        " ",
+        " ",
+        " "
+      ]
+    },
+    {
+      "topic": "2. Application Development",
+      "image": "/images/service2.jpg",
+      "description": {
+        "paragraph1": "First paragraph of service 2 description.",
+        "paragraph2": "Second paragraph of service 2 description.",
+        "paragraph3": "Third paragraph of service 2 description."
+      },
+      "points": [
+        "Point 1",
+        "Point 2",
+        "Point 3"
+      ]
+    },
+    {
+      "topic": "3. Quality Analysis",
+      "image": "/images/service2.jpg",
+      "description": {
+        "paragraph1": "First paragraph of service 2 description.",
+        "paragraph2": "Second paragraph of service 2 description.",
+        "paragraph3": "Third paragraph of service 2 description."
+      },
+      "points": [
+        "Point 1",
+        "Point 2",
+        "Point 3"
+      ]
+    },
+    {
+      "topic": "4. Big Data",
+      "image": "/images/service2.jpg",
+      "description": {
+        "paragraph1": "First paragraph of service 2 description.",
+        "paragraph2": "Second paragraph of service 2 description.",
+        "paragraph3": "Third paragraph of service 2 description."
+      },
+      "points": [
+        "Point 1",
+        "Point 2",
+        "Point 3"
+      ]
+    },{
+      "topic": "5. Business Analysis",
+      "image": "/images/service2.jpg",
+      "description": {
+        "paragraph1": "First paragraph of service 2 description.",
+        "paragraph2": "Second paragraph of service 2 description.",
+        "paragraph3": "Third paragraph of service 2 description."
+      },
+      "points": [
+        "Point 1",
+        "Point 2",
+        "Point 3"
+      ]
+    },
+    {
+      "topic": "6. Mobile App Development",
+      "image": "/images/service2.jpg",
+      "description": {
+        "paragraph1": "First paragraph of service 2 description.",
+        "paragraph2": "Second paragraph of service 2 description.",
+        "paragraph3": "Third paragraph of service 2 description."
+      },
+      "points": [
+        "Point 1",
+        "Point 2",
+        "Point 3"
+      ]
+    },
+    {
+      "topic": "Service 7",
+      "image": "/images/service2.jpg",
+      "description": {
+        "paragraph1": "First paragraph of service 2 description.",
+        "paragraph2": "Second paragraph of service 2 description.",
+        "paragraph3": "Third paragraph of service 2 description."
+      },
+      "points": [
+        "Point 1",
+        "Point 2",
+        "Point 3"
+      ]
+    }
+
+    
+  ]
+}

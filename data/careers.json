@@ -1,0 +1,74 @@
+{
+  "careers": [
+    {
+      "name": "Software Engineer",
+      "location": "Anywhere",
+      "responsibilities": ["Develop high-quality software design and architecture", "Identify, prioritize, and execute tasks in the software development life cycle", "Develop tools and applications by producing clean, efficient code", "Automate tasks through appropriate tools and scripting"],
+      "minimumQualification": "Bachelor's degree in Computer Science or related field",
+      "specialQualifications": ["Experience with software design and development in a test-driven environment", "Knowledge of coding languages (e.g., Java, JavaScript, Python)"],
+      "requirements": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+      ]
+    },
+     {
+      "name": "Software Engineer",
+      "location": "Anywhere",
+      "responsibilities": ["Develop high-quality software design and architecture", "Identify, prioritize, and execute tasks in the software development life cycle", "Develop tools and applications by producing clean, efficient code", "Automate tasks through appropriate tools and scripting"],
+      "minimumQualification": "Bachelor's degree in Computer Science or related field",
+      "specialQualifications": ["Experience with software design and development in a test-driven environment", "Knowledge of coding languages (e.g., Java, JavaScript, Python)"],
+      "requirements": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+      ]
+    },
+     {
+      "name": "Software Engineer",
+      "location": "Anywhere",
+      "responsibilities": ["Develop high-quality software design and architecture", "Identify, prioritize, and execute tasks in the software development life cycle", "Develop tools and applications by producing clean, efficient code", "Automate tasks through appropriate tools and scripting"],
+      "minimumQualification": "Bachelor's degree in Computer Science or related field",
+      "specialQualifications": ["Experience with software design and development in a test-driven environment", "Knowledge of coding languages (e.g., Java, JavaScript, Python)"],
+      "requirements": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+      ]
+    },
+     {
+      "name": "Software Engineer",
+      "location": "Anywhere",
+      "responsibilities": ["Develop high-quality software design and architecture", "Identify, prioritize, and execute tasks in the software development life cycle", "Develop tools and applications by producing clean, efficient code", "Automate tasks through appropriate tools and scripting"],
+      "minimumQualification": "Bachelor's degree in Computer Science or related field",
+      "specialQualifications": ["Experience with software design and development in a test-driven environment", "Knowledge of coding languages (e.g., Java, JavaScript, Python)"],
+      "requirements": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+      ]
+    },
+     {
+      "name": "Software Engineer",
+      "location": "Anywhere",
+      "responsibilities": ["Develop high-quality software design and architecture", "Identify, prioritize, and execute tasks in the software development life cycle", "Develop tools and applications by producing clean, efficient code", "Automate tasks through appropriate tools and scripting"],
+      "minimumQualification": "Bachelor's degree in Computer Science or related field",
+      "specialQualifications": ["Experience with software design and development in a test-driven environment", "Knowledge of coding languages (e.g., Java, JavaScript, Python)"],
+      "requirements": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+      ]
+    },
+     {
+      "name": "Software Engineer",
+      "location": "Anywhere",
+      "responsibilities": ["Develop high-quality software design and architecture", "Identify, prioritize, and execute tasks in the software development life cycle", "Develop tools and applications by producing clean, efficient code", "Automate tasks through appropriate tools and scripting"],
+      "minimumQualification": "Bachelor's degree in Computer Science or related field",
+      "specialQualifications": ["Experience with software design and development in a test-driven environment", "Knowledge of coding languages (e.g., Java, JavaScript, Python)"],
+      "requirements": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+      ]
+    },
+    {
+      "name": "Marketing Manager",
+      "location": "New York",
+      "responsibilities": ["Develop marketing strategies for projects, including company websites and social media", "Work closely with the sales team on program development and implementation", "Create and execute lead generation programs"],
+      "minimumQualification": "Bachelor's degree in Marketing, Business, or related field",
+      "specialQualifications": ["Experience in digital marketing", "Proven experience in identifying target audiences and in creatively devising and leading across channels marketing campaigns"],
+      "requirements": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+      ]
+    }
+  ]
+}
