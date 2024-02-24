@@ -1,37 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# This is Indian Railway Website  Repo for website
 
-## Getting Started
+This Repo is Officially Managed & Developed by the Development Tech Tigers Development Team
+1. Gautam kushwaha
+2. Leela Sri
+3. 
+4. 
+5.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Note for Developers
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Strictly create a branch first and then only start working on something.
+Todo so you can follow the steps below:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Create branch
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- $ git branch new_branch
 
-## Learn More
+2. Check all branch
 
-To learn more about Next.js, take a look at the following resources:
+- $ git branch -v
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Change master -> new_branch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- $ git checkout new_branch
 
-## Deploy on Vercel
+Now you can work from here whatever change you want to make you can do it now. After that follow the below steps.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Track files specific to new_branch
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Refyndata
+- $ git add .
+
+5. Now change back to Master branch from new_branch
+
+- $ git checkout master
+
+6. Commit & Push new_branch to server now
+
+- $ git commit -m "your message"
+
+- $ git push -u origin new_branch
+
+7. Merge new_branch to master
+
+- $ git merge new_branch
+
+8. After merge we can push the changes to the server
+
+- $ git push origin master
+
+9. After doing all if you want to delete new_branch locally then do the following
+
+- $ git branch -D new_branch
+
+10. Now push the changes so that new_branch gets deleted on the server as well
+
+- $ git push origin --delete new_branch
+
+
+--------------------------------------------------------------------
+Q. How to get incoming update from main branch to working branch?
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+A. git merge main (when you're in your working branch)
+--------------------------------------------------------------------
+
+
+# Summary
+
+- $ git branch new_branch
+- $ git checkout new_branch
+- $ git push -u origin new_branch
+- $ git branch -v (list all branch)
+- $ git merge new_branch
+- $ git branch -D new_branch
+- $ git push origin -delete new_branch# SIH_New_Railway_website
+
+# Jus have a glance on the website interfaces:
+![Alt Text](https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?size=626&ext=jpg&ga=GA1.2.788017613.1695444954&semt=ais)
+
+![Alt Text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Gv5Nv7EJx8ciqOXEwQ_ZXWKEYViziWRg-Q&usqp=CAU)
+![Alt Text](./BrowserImage/1.png)
+![Alt Text](./BrowserImage/2.png)
+![Alt Text](./BrowserImage/3.png)
+![Alt Text](./BrowserImage/4.png)
+
+#clicking on the goto section "click me"  you will be navigated to the /passenger route. similarly for the security person entering the security code they will be navigated to the /security page and they will be like this.. they will have different interface on the basic of requirement. This is the sample interface, which we have kept same but will be different for both of them..
+
+![Alt Text](./BrowserImage/5.png)
+![Alt Text](./BrowserImage/1.png)
+![Alt Text](./BrowserImage/1.png)
+![Alt Text](./BrowserImage/1.png)
+![Alt Text](./BrowserImage/1.png)
+![Alt Text](./BrowserImage/1.png)
