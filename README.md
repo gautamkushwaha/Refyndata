@@ -1,6 +1,6 @@
 # This is refyndata company website
 
-This Repo is Officially Managed & Developed by the Development Tech Tigers Development Team
+This Repo is Officially Managed & Developed by Team containing: 
 1. Gautam kushwaha
 2. Leela Sri
 3. Sai Komal
