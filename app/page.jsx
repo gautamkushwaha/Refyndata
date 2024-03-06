@@ -21,8 +21,8 @@ export default function Page() {
       <body>
         <Home />
         <AboutUs />
-        <ServiceSection />
-        {/* <Partners/> */}
+        <ServiceSection /> 
+        {/* {/* <Partners/> */}
       </body>
     </>
 

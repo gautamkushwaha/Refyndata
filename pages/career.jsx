@@ -1,6 +1,9 @@
+
 import { useState } from 'react';
 import careersData from '@/data/careers.json';
 import RootLayout from '@/app/layout';
+import axios from 'axios';
+import sendEmail from '@/Backend/backend.jsx'; 
 
 const Careers = () => {
   const [selectedJob, setSelectedJob] = useState(careersData.careers[0]);
@@ -27,31 +30,42 @@ const Careers = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('https://example.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-      if (response.ok) {
-        console.log('Form submitted successfully');
-        // Reset form data after submission
-        setFormData({
-          name: '',
-          email: '',
-          contact: '',
-          qualification: '',
-          resume: '',
-          message: ''
+
+    const data = new FormData();
+    data.append('name', formData.name);
+    data.append('email', formData.email);
+    data.append('message', formData.message);
+
+    // Check if formData.resume exists and is a valid file type
+    if (formData.resume && isFileTypeValid(formData.resume)) {
+      data.append('file', formData.resume);
+
+      try {
+        const response = await axios.post('http://localhost:7001/send', data, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
         });
-      } else {
-        console.error('Failed to submit form');
+
+        // Send email using sendEmail function
+        sendEmail(formData);
+
+        alert('Form submitted successfully!');
+        console.log(response.data);
+      } catch (error) {
+        console.error('There was an error sending the form:', error);
+        alert('There was an error sending the form.');
       }
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } else {
+      alert('Please select a valid file type (doc, pdf, txt)');
+      return;
     }
+  };
+
+  // Function to check if the file type is valid
+  const isFileTypeValid = (file) => {
+    const allowedTypes = ['application/msword', 'application/pdf', 'text/plain'];
+    return allowedTypes.includes(file.type);
   };
   
 
@@ -129,7 +143,10 @@ const Careers = () => {
                   </ul>
                   <div className="mt-6">
                     <h3 className="text-xl font-semibold mb-2">Apply for this position</h3>
-                    <form onSubmit={handleSubmit} className="w-full max-w-lg">
+
+                    <a href="mailto:kushwahagautam24@gmail.com">Send your resume at: <br/> <span className='bg-black text-white'>kushwahagautam24@gmail.com</span></a>
+
+                    {/* <form onSubmit={handleSubmit} className="w-full max-w-lg">
                       <div className="mb-4">
                         <label className="block text-sm font-medium text-gray-700">Name</label>
                         <input
@@ -196,7 +213,7 @@ const Careers = () => {
                         ></textarea>
                       </div>
                       <button type="submit" className="bg-[#0079A0] text-white border border-rounded btn btn-primary w-full">Send</button>
-                    </form>
+                    </form> */}
                   </div>
                 </div>
               </div>
@@ -209,3 +226,6 @@ const Careers = () => {
 };
 
 export default Careers;
+
+
+
