@@ -4,7 +4,7 @@ This Repo is Officially Managed & Developed by Team containing:
 1. Gautam kushwaha
 2. Leela Sri
 3. Sai Komal
-4. 
+4. Ravi Teja Chatii
 5.
 
 
