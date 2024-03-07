@@ -1,81 +1,78 @@
-// // server.js (Backend)
-// const express = require('express');
-// const multer = require('multer');
-// const nodemailer = require('nodemailer');
-// require('dotenv').config();
+require('dotenv').config();
 
-// const app = express();
-// const port = 5000;
+const express = require('express');
+const nodemailer = require('nodemailer');
+const multer = require('multer');
+const cors = require('cors');
 
-// const storage = multer.memoryStorage();
-// const upload = multer({
-//   storage: storage,
-//   limits: { fileSize: 2 * 1024 * 1024 }, // 2MB limit
-//   fileFilter: (req, file, cb) => {
-//     if (['.doc', '.txt', '.pdf'].includes(file.originalname.slice(-4))) {
-//       cb(null, true);
-//     } else {
-//       cb(new Error('Invalid file type'));
-//     }
-//   }
-// });
+const app = express();
+app.use(cors());
+app.use(express.json());
 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
 
-// app.post('/send-email', upload.single('resume'), async (req, res) => {
-//   try {
-//     const { name, email, qualification, message } = req.body;
-//     const resume = req.file;
 
-//     const transporter = nodemailer.createTransport({
-//       host: process.env.SMTP_HOST,
-//       port: 587,
-//       secure: false,
-//       auth: {
-//         user: process.env.SMTP_USER,
-//         pass: process.env.SMTP_PASS
-//       }
-//     });
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads'); // Make sure this directory exists
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + file.originalname);
+  }
+});
 
-//     const mailOptionsCompany = {
-//       from: process.env.SMTP_USER,
-//       to: process.env.COMPANY_EMAIL,
-//       subject: 'New Job Application',
-//       html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Qualification: ${qualification}</p><p>Message: ${message}</p>`
-//     };
+const upload = multer({ storage: storage });
 
-//     const mailOptionsSender = {
-//       from: process.env.SMTP_USER,
-//       to: email,
-//       subject: 'Thank you for applying',
-//       html: `<p>Dear ${name},<br/>Thank you for your application. We will review your details and contact you shortly.</p>`
-//     };
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    
+    user:process.env.ADMIN_GMAIL,
+    pass:process.env.APP_PASSWORD
+  }
+});
 
-//     // Send emails only in the server-side code
-//     if (typeof window === 'undefined') {
-//       // Import DKIM module only in the server-side code
-//       const { DKIM } = await import('nodemailer/lib/dkim');
+app.post('/send', upload.single('file'), (req, res) => {
+  const { name, email, message } = req.body;
+  const file = req.file; // Access uploaded file
 
-//       // Add DKIM signature to the email
-//       const dkim = new DKIM({
-//         domainName: 'your_domain.com',
-//         keySelector: 'your_key_selector',
-//         privateKey: 'your_private_key'
-//       });
-//       dkim.sign(mailOptionsCompany);
+  // Email you send to yourself
+  const mailOptions = {
+    from: email,
+    to: process.env.ADMIN_GMAIL, // Or any other recipient
+    subject: 'New Form Submission',
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    attachments: [
+      {
+        filename: file.originalname,
+        path: file.path // Use the file path from multer
+      }
+    ]
+  };
+  const confirmationMail = {
+    from: process.env.ADMIN_GMAIL,
+    to: email,
+    subject: 'Thank you for your submission',
+    text: 'Thank you for submitting the form. We will be in touch soon!'
+  };
 
-//       await transporter.sendMail(mailOptionsCompany);
-//       await transporter.sendMail(mailOptionsSender);
-//     }
 
-//     res.sendStatus(200);
-//   } catch (error) {
-//     console.error('Error sending email:', error);
-//     res.sendStatus(500);
-//   }
-// });
+  // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send('Error sending email');
+    } else {
+        transporter.sendMail(confirmationMail, (error, info) => {
+            if (error) {
+              console.log(error);
+              res.status(500).send('Error sending confirmation email');
+            } else {
+              res.status(200).send('Email sent successfully');
+            }
+          });
+    }
+  });
+});
 
-// app.listen(port, () => {
-//   console.log(`Server running on port ${port}`);
-// });
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
