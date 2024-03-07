@@ -3,31 +3,30 @@ import { useState } from 'react';
 import careersData from '@/data/careers.json';
 import RootLayout from '@/app/layout';
 import axios from 'axios';
-import sendEmail from '@/Backend/backend.jsx'; 
+
 
 const Careers = () => {
   const [selectedJob, setSelectedJob] = useState(careersData.careers[0]);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    contact: '',
-    qualification: '',
-    resume: '',
-    message: ''
+    message: '',
   });
+  const [file, setFile] = useState(null);
 
   const handleJobSelect = (job) => {
     setSelectedJob(job);
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    if (e.target.name === 'file') {
+      setFile(e.target.files[0]);
+    } else {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    }
   };
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -35,30 +34,21 @@ const Careers = () => {
     data.append('name', formData.name);
     data.append('email', formData.email);
     data.append('message', formData.message);
+    if (file) {
+      data.append('file', file);
+    }
 
-    // Check if formData.resume exists and is a valid file type
-    if (formData.resume && isFileTypeValid(formData.resume)) {
-      data.append('file', formData.resume);
-
-      try {
-        const response = await axios.post('http://localhost:7001/send', data, {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-          },
-        });
-
-        // Send email using sendEmail function
-        sendEmail(formData);
-
-        alert('Form submitted successfully!');
-        console.log(response.data);
-      } catch (error) {
-        console.error('There was an error sending the form:', error);
-        alert('There was an error sending the form.');
-      }
-    } else {
-      alert('Please select a valid file type (doc, pdf, txt)');
-      return;
+    try {
+      const response = await axios.post('http://localhost:5000/send', data, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      alert('Form submitted successfully!');
+      console.log(response.data);
+    } catch (error) {
+      console.error('There was an error sending the form:', error);
+      alert('There was an error sending the form.');
     }
   };
 
@@ -146,74 +136,52 @@ const Careers = () => {
 
                     <a href="mailto:kushwahagautam24@gmail.com">Send your resume at: <br/> <span className='bg-black text-white'>kushwahagautam24@gmail.com</span></a>
 
-                    {/* <form onSubmit={handleSubmit} className="w-full max-w-lg">
-                      <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700">Name</label>
-                        <input
-                          type="text"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          className=" border form-input mt-1 block w-full"
-                          required
-                        />
-                      </div>
-                      <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700">Email</label>
-                        <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          className="border form-input mt-1 block w-full"
-                          required
-                        />
-                      </div>
-                      <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700">Contact (with country code)</label>
-                        <input
-                          type="text"
-                          name="contact"
-                          value={formData.contact}
-                          onChange={handleChange}
-                          className=" border form-input mt-1 block w-full"
-                          required
-                        />
-                      </div>
-                      <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700">Highest Qualification</label>
-                        <input
-                          type="text"
-                          name="qualification"
-                          value={formData.qualification}
-                          onChange={handleChange}
-                          className="border form-input mt-1 block w-full"
-                          required
-                        />
-                      </div>
-                      <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700">Send Resume (File)</label>
-                        <input
-                          type="file"
-                          name="resume"
-                          onChange={handleChange}
-                          className="border form-input mt-1 block w-full"
-                          required
-                        />
-                      </div>
-                      <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700">Write your message</label>
-                        <textarea
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          rows="4"
-                          className="border form-textarea mt-1 block w-full"
-                          required
-                        ></textarea>
-                      </div>
-                      <button type="submit" className="bg-[#0079A0] text-white border border-rounded btn btn-primary w-full">Send</button>
-                    </form> */}
+                    
+    <div>
+      <h2>Contact Us</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message:</label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="file">File:</label>
+          <input
+            type="file"
+            name="file"
+            onChange={handleChange}
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  
+
                   </div>
                 </div>
               </div>
