@@ -20,8 +20,21 @@ const Careers = () => {
 
   const handleChange = (e) => {
     if (e.target.name === 'file') {
-      setFile(e.target.files[0]);
+      const selectedFile = e.target.files[0];
+      // Validate file size (not exceeding 4MB)
+      if (selectedFile && selectedFile.size > 4 * 1024 * 1024) {
+        alert("File size should not exceed 4MB.");
+        return; // Stop the function if validation fails
+      }
+      // Validate file type (must be a text file)
+      if (selectedFile && selectedFile.type !== "text/plain") {
+        alert("Only text files are allowed.");
+        return; // Stop the function if validation fails
+      }
+      // If validations pass, update the file state
+      setFile(selectedFile);
     } else {
+      // Handle other inputs normally
       setFormData({ ...formData, [e.target.name]: e.target.value });
     }
   };
