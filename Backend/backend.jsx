@@ -9,6 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+console.log(process.env.NEXT_PUBLIC_ADMIN_GMAIL);
+
 
 
 const storage = multer.diskStorage({
@@ -26,21 +28,21 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     
-    user:process.env.ADMIN_GMAIL,
-    pass:process.env.APP_PASSWORD
+    user:"ravitejachatti@gmail.com",
+    pass:"jtig ygmd jlaq sdux"
   }
 });
 
 app.post('/send', upload.single('file'), (req, res) => {
-  const { name, email, message } = req.body;
+  const { name,contact, email,qualification, message } = req.body;
   const file = req.file; // Access uploaded file
 
   // Email you send to yourself
   const mailOptions = {
     from: email,
-    to: process.env.ADMIN_GMAIL, // Or any other recipient
+    to: "ravitejachatti@gmail.com", // Or any other recipient
     subject: 'New Form Submission',
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    text: `Name: ${name}\n contact: ${contact}\nEmail: ${email}\n Qualification: ${qualification} \nMessage: ${message}`,
     attachments: [
       {
         filename: file.originalname,
@@ -49,7 +51,7 @@ app.post('/send', upload.single('file'), (req, res) => {
     ]
   };
   const confirmationMail = {
-    from: process.env.ADMIN_GMAIL,
+    from: "ravitejachatti@gmail.com",
     to: email,
     subject: 'Thank you for your submission',
     text: 'Thank you for submitting the form. We will be in touch soon!'
