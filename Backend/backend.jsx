@@ -26,8 +26,8 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     
-    user:process.env.ADMIN_GMAIL,
-    pass:process.env.APP_PASSWORD
+    user:"ravitejachatti@gmail.com",
+    pass:"jtig ygmd jlaq sdux"
   }
 });
 
@@ -38,7 +38,7 @@ app.post('/send', upload.single('file'), (req, res) => {
   // Email you send to yourself
   const mailOptions = {
     from: email,
-    to: process.env.ADMIN_GMAIL, // Or any other recipient
+    to: "ravitejachatti@gmail.com", // Or any other recipient
     subject: 'New Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     attachments: [
@@ -49,7 +49,7 @@ app.post('/send', upload.single('file'), (req, res) => {
     ]
   };
   const confirmationMail = {
-    from: process.env.ADMIN_GMAIL,
+    from:"ravitejachatti@gmail.com",
     to: email,
     subject: 'Thank you for your submission',
     text: 'Thank you for submitting the form. We will be in touch soon!'
@@ -74,5 +74,5 @@ app.post('/send', upload.single('file'), (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
