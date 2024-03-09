@@ -101,12 +101,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white text-[#0079A0] font-bold shadow-lg sticky top-0 z-50">
+    <nav className="bg-white text-[#0079A0] font-bold shadow-lg sticky top-0 z-40">
       <div className="max-w-7xl mx-auto ">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <img className="block lg:hidden h-40 w-auto" src="/logo.png" alt="Logo" />
-            <img className="hidden lg:block h-40 w-auto" src="/logo.png" alt="Logo" />
+            <img className="block lg:hidden h-32 w-auto P-2" src="/refyndata_new_log.jpeg" alt="Logo" />
+            <img className="hidden lg:block h-32 w-auto P-2" src="/refyndata_new_log.jpeg" alt="Logo" />
           </div>
           <div className="flex items-center">
             <div className="hidden lg:flex space-x-4">

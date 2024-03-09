@@ -1,13 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="mt-12 py-14 z-100">
+    <footer className="mt-12 py-14 z-100 bg-[#F2F5F8]">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-40">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-10 md:gap-x-20 lg:gap-x-[100px] px-10 md:px-10 lg:px-5">
           {/* Column 1 */}
-          <div className="mb-4 md:mb-0">
-            <h3 className="text-xl font-semibold mb-2">Refyndata</h3>
+          <div className="  mb-4 md:mb-0">
+            <h3 className=" text-2xl font-semibold mb-2">Refyndata</h3>
+            <img src="/verify.png" alt="company_verification" />
             <p className="text-sm">With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</p>
           </div>
 
@@ -32,26 +34,26 @@ const Footer = () => {
 
 
           {/* Column 4 */}
-          <div className="mb-4 md:mb-0 ">
-            <h3 className="text-xl font-semibold mb-2">Follow Us</h3>
+          <div className="mb-4 md:mb-0 text-[#0B1320] ">
+            <h3 className="text-xl font-semibold mb-2">Follow Us:</h3>
             <div className="">
-              <a href="#" className="text-blue-500 block mb-2">Twitter</a>
-              <a href="#" className="text-blue-500 block mb-2">LinkedIn</a>
-              <a href="#" className="text-blue-500 block">Facebook</a>
+              <a href="#" className=" block mb-2">Twitter</a>
+              <a href="#" className=" block mb-2">LinkedIn</a>
+              <a href="#" className=" block">Facebook</a>
             </div>
           </div>
 
         </div>
         {/* Line below the footer */}
-        <div className="border-t border-gray-600 my-4"></div>
+        <div className="border-t border-gray-600 my-4 mx-5">
         <div className="container mx-auto">
-          <div className="flex justify-between items-center">
-            <p className="text-xs">Refyndata @ 2024 All rights reserved</p>
+          <div className="flex justify-between items-center text-[#0B1320]">
+            <p className="text-xs ">Refyndata @ 2024 All rights reserved</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-blue-500 text-xs">Terms and Conditions</a>
-              <a href="#" className="text-blue-500 text-xs">Privacy</a>
+              <a href="#" className=" text-xs">Terms and Conditions</a>
+              <a href="#" className="text-xs">Privacy</a>
             </div>
-          </div>
+          </div></div>
         </div>
 
       </div>

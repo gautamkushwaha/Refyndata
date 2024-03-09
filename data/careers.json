@@ -1,13 +1,42 @@
 {
   "careers": [
     {
-      "name": "Software Engineer",
-      "location": "Anywhere",
-      "responsibilities": ["Develop high-quality software design and architecture", "Identify, prioritize, and execute tasks in the software development life cycle", "Develop tools and applications by producing clean, efficient code", "Automate tasks through appropriate tools and scripting"],
+      "name": "SENIOR SOFTWARE ENGINEER",
+      "location": "Clarksburg-MD",
+      "responsibilities": ["Work with support teams to ensure that the Discovery tool has the appropriate access and permissions to capture configuration information ",
+       "Perform day-to-day administration of the ServiceNow Service Mapping/Discovery tool, including mapping additional defined business services into the tool and updating discovery configurations for deeper network penetration ",
+       "Assist the CMDB Administrator with developing and maintain the technical design of the ServiceNow CMDB to meet the current and anticipated scope and maintain CMDB integrity to effectively support other ITSM processes such as Incident Mgt., Change Mgt., and Asset Mgt.",
+       "Implement data governance through identification rules and configuration of multiple discovery sources that populate the CMDB.",
+       "Strong hands-on experience in optimizing discovery, tailoring patterns and development.",
+       "Validating discovery results and troubleshooting as required",
+       "Assist the CMDB Administrator team with designing, deploying, and managing ServiceNow Service Mapping solutions for both on-premise and cloud resources, including schedules, credentials, and mid-servers.",
+       "Define, create, and manage Service Mapping infrastructure, including patterns",
+       "Work with support teams to identify, investigate and resolve Service Mapping issues, ensuring that Service Mapping is performing as expected."
+       ],
       "minimumQualification": "Bachelor's degree in Computer Science or related field",
       "specialQualifications": ["Experience with software design and development in a test-driven environment", "Knowledge of coding languages (e.g., Java, JavaScript, Python)"],
       "requirements": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+        "Lead requirements analysis, document, and develop on the ServiceNow platform",
+        "Integrate ServiceNow with other tools such as Workday, AD, Okta, Office",
+        "The candidate will understand ServiceNow functionality and how all ITIL processes can be implemented in ServiceNow. This includes, but is not limited to, incident, request, change, problem, knowledge, SLA, configuration, asset, portal, service catalog, and reporting, including Performance Analytics.",
+        "System integration experience using web services and other web-based technologies such as XML, HTML, AJAX, CSS, HTTP, REST/SOAP",
+        "Knowledge of networking including TCP/IP ports and firewalls, network protocols, and IP networks",
+        "Strong written and verbal communication skills (English)",
+        "Strong analytical and problem-solving skills",
+        "Experience presenting and conducting demos with stakeholders",
+        "Experience with Business Rules, Script Includes, UI Actions, Scheduled Jobs - all scripted aspects of the ServiceNow system",
+        "Experience in with scripting languages: JavaScript, Python, Perl, Unix Shell, Windows Shell",
+        "Experience with relational databases",
+        "Experience on ServiceNow Platform ITSM and ITOM",
+        "Experience in JavaScript, HTML, CSS",
+        "Experience in developing Applications using ServiceNow Portal",
+        "Experience in integrating applications.",
+        "Expert in developing and integrating custom applications using ServiceNow Portal",
+        "Configuring and developing customer applications using ServiceNow platform",
+        "Ability to learn new technology.",
+        "Very good in Verbal and Written communication",
+        "Experience of Platform Upgrades",
+        "Experience in HR and Facilities domain"
       ]
     },
      {

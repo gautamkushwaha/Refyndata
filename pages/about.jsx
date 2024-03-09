@@ -44,16 +44,16 @@ const About = () => {
                 <div className="mb-10">
                     <h1 className="text-md font-bold">Home / About Us</h1>
                 </div>
-                <div className="grid grid-cols-3 md:grid-cols-3 gap-10">
-                    {/* Table (Mobile first) */}
-                    <div className="col-span-1">
-                        <div className="w-full p-5 border border-rounded">
-                            <p className="px-5 py-3 pb-5 font-semibold">Contents</p>
-                            <table className="w-full">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[60px]">
+                    {/* Table of Contents (Mobile view) */}
+                    <div className="">
+                        <div className="w-full border border-gray-400 rounded-md">
+                            <p className="px-5 py-3 font-bold">Contents:</p>
+                            <table className="w-full px-5">
                                 <tbody>
                                     {topicsAndDescriptions.map(({ topic }, index) => (
                                         <tr key={index}>
-                                            <td className="px-6 py-2">{topic}</td>
+                                            <td className="px-6 py-2 font-semibold">{topic}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -61,13 +61,12 @@ const About = () => {
                         </div>
                     </div>
                     {/* Description (Desktop and Tablet) */}
-                    <div className="hidden md:block col-span-2">
-                        <h3 className='text-3xl font-bold'>About Us</h3>
+                    <div className="col-span-2 md:col-span-2 lg:col-span-2">
+                        <h3 className="text-3xl font-bold">About Us</h3>
                         <div className="border-t border-gray-600 my-4"></div>
                         <p>Refyn Data empowers businesses with the perfect IT talent and data-driven solutions, offering unbeatable value for both government and private clients. Our expert consultants combine top-notch technical skills with deep industry knowledge, and go beyond mere project delivery. We become trusted partners, tailoring solutions to your specific needs and project environment. Think of us as your secret weapon, unlocking hidden potential and propelling your business forward.</p>
                         {topicsAndDescriptions.map(({ topic, description }, index) => (
                             <div key={index} className="mb-4"> 
-                       
                                 <h2 className="text-xl font-semibold mb-2">{topic}</h2>
                                 {topic === 'Our Solutions' ? (
                                     <>
