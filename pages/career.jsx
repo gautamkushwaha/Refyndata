@@ -9,7 +9,9 @@ const Careers = () => {
   const [selectedJob, setSelectedJob] = useState(careersData.careers[0]);
   const [formData, setFormData] = useState({
     name: '',
+    contact:'',
     email: '',
+    qualification:'',
     message: '',
   });
   const [file, setFile] = useState(null);
@@ -27,10 +29,9 @@ const Careers = () => {
         return; // Stop the function if validation fails
       }
       // Validate file type (must be a text file)
-      if (selectedFile && selectedFile.type !== "text/plain") {
-        alert("Only text files are allowed.");
-        return; // Stop the function if validation fails
-      }
+      if (selectedFile && (selectedFile.type === "image/png" || selectedFile.type === "image/jpeg" || selectedFile.type === "image/jpg")) {
+        alert("Image files are not allowed.");
+        return; }// Stop the function if validation fails
       // If validations pass, update the file state
       setFile(selectedFile);
     } else {
@@ -45,8 +46,11 @@ const Careers = () => {
 
     const data = new FormData();
     data.append('name', formData.name);
+    data.append('contact',formData.contact);
     data.append('email', formData.email);
+    data.append('qualification',formData.qualification);
     data.append('message', formData.message);
+    
     if (file) {
       data.append('file', file);
     }
@@ -164,6 +168,16 @@ const Careers = () => {
           />
         </div>
         <div>
+          <label htmlFor="name">contact number</label>
+          <input
+            type="number"
+            name="contact"
+            value={formData.contact}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -174,10 +188,11 @@ const Careers = () => {
           />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            name="message"
-            value={formData.message}
+          <label htmlFor="name">qualification:</label>
+          <input
+            type="text"
+            name="qualification"
+            value={formData.qualification}
             onChange={handleChange}
             required
           />
@@ -188,8 +203,19 @@ const Careers = () => {
             type="file"
             name="file"
             onChange={handleChange}
+            required
           />
         </div>
+        <div>
+          <label htmlFor="message">Message:</label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            
+          />
+        </div>
+        
         <button type="submit">Submit</button>
       </form>
     </div>
