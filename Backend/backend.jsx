@@ -50,12 +50,13 @@ app.post('/send', upload.single('file'), (req, res) => {
       }
     ]
   };
-  const confirmationMail = {
-    from: "ravitejachatti@gmail.com",
-    to: email,
-    subject: 'Thank you for your submission',
-    text: 'Thank you for submitting the form. We will be in touch soon!'
-  };
+  
+const confirmationMail = {
+  from: "ravitejachatti@gmail.com",
+  to: email,
+  subject: 'Thank you for your submission',
+  text: 'Thank you for submitting the form. We will be in touch soon!'
+};
 
 
   // Send the email
@@ -76,5 +77,5 @@ app.post('/send', upload.single('file'), (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

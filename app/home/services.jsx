@@ -1,5 +1,4 @@
-// CartAnimation.jsx
-import React from 'react';
+
 import styles from '@/styles/CartAnimation.module.css'; // Ensure you create and link this CSS file
 
 
@@ -182,4 +181,5 @@ const CartAnimation = () => {
 };
 
 export default CartAnimation;*/
+
 

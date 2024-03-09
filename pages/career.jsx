@@ -56,7 +56,7 @@ const Careers = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/send', data, {
+      const response = await axios.post('http://localhost:5001/send', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
