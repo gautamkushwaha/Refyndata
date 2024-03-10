@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function AboutUs() {
   return (
-    <section className="bg-[#F2F5F8] py-5 md:py-10 lg:py-20">
+    <section className="bg-[#F2F5F8] py-5 md:py-8 lg:py-12">
       <div className="container mx-auto">
         {/* About Us Heading */}
         <div className="text-center mb-8 px-50 pb-5">
@@ -23,33 +23,33 @@ export default function AboutUs() {
           {/* Card 1 */}
           <div className=" overflow-hidden">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-              <img src="https://img.freepik.com/free-vector/check-mark-three-stars_78370-4450.jpg?size=626&ext=jpg&uid=R117697906&ga=GA1.1.494848340.1707655365&semt=ais" alt="Logo 1" className="w-16 h-16 rounded-full object-cover object-center" />
+              <img src="home_image/exclusive.png" alt="exlusive service" className="w-16 h-16 rounded-full object-cover object-center" />
             </div>
             <div className="m-2 p-4">
-              <h3 className="text-xl font-semibold mb-2 text-center">Exclusive Service</h3>
-              <p className="text-gray-600 text-center">Take the solution of our cutting edge technology with our expertise solution who are expertise are in the top-tech notch</p>
+              <h3 className="text-xl font-semibold mb-2 text-center transform transition-transform hover:translate-y-[-1px]">Exclusive Service</h3>
+              <p className="text-gray-600 text-center transform transition-transform hover:translate-y-[-1px]">We serve small, medium, and large scale organizations with the belief that no business or technological initiative is too difficult for us to handle</p>
             </div>
           </div>
 
           {/* Card 2 */}
           <div className=" overflow-hidden">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-              <img src="https://img.freepik.com/free-vector/check-mark-three-stars_78370-4450.jpg?size=626&ext=jpg&uid=R117697906&ga=GA1.1.494848340.1707655365&semt=ais" alt="Logo 1" className="w-16 h-16 rounded-full object-cover object-center" />
+              <img src="/home_image/superFast.png" alt="superFast" className="w-16 h-16 rounded-full object-cover object-center" />
             </div>
             <div className="m-2 p-4">
-              <h3 className="text-xl font-semibold mb-2 text-center">Exclusive Service</h3>
-              <p className="text-gray-600 text-center">Take the solution of our cutting edge technology with our expertise solution who are expertise are in the top-tech notch</p>
+              <h3 className="text-xl font-semibold mb-2 text-center transform transition-transform hover:translate-y-[-1px]">Super Fast </h3>
+              <p className="text-gray-600 text-center transform transition-transform hover:translate-y-[-1px]">From cloud migration to managed IT, Refyn Data's quick-deploy solutions & top talent get you online and optimized - fast</p>
             </div>
           </div>
 
           {/* Card 3 */}
           <div className=" overflow-hidden">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-              <img src="https://img.freepik.com/free-vector/check-mark-three-stars_78370-4450.jpg?size=626&ext=jpg&uid=R117697906&ga=GA1.1.494848340.1707655365&semt=ais" alt="Logo 1" className="w-16 h-16 rounded-full object-cover object-center" />
+              <img src="/home_image/BestQuality.png" alt="Best Quality" className="w-16 h-16 rounded-full object-cover object-center" />
             </div>
             <div className="m-2 p-4">
-              <h3 className="text-xl font-semibold mb-2 text-center">Exclusive Service</h3>
-              <p className="text-gray-600 text-center">Take the solution of our cutting edge technology with our expertise solution who are expertise are in the top-tech notch</p>
+              <h3 className="text-xl font-semibold mb-2 text-center transform transition-transform hover:translate-y-[-1px]">Best Quality</h3>
+              <p className="text-gray-600 text-center transform transition-transform hover:translate-y-[-1px]">Refyn Data's top-notch IT solutions go beyond fixing problems. They proactively optimize your systems, ensuring smooth sailing for your business.</p>
             </div>
           </div>
         </div>

@@ -20,7 +20,7 @@ const Services = () => {
          
           <div className="md:col-span-1 "> 
           <div className='w-full border border-gray-400 rounded-md'>
-          <p className="px-5 py-3 font-bold">Contents:</p>
+          <p className="text-2xl px-5 py-3 font-bold">Services:</p>
             <table className="w-full  ">
            
               <tbody>
@@ -38,18 +38,18 @@ const Services = () => {
             <div>
               <h2 className='text-3xl font-bold text-gray-800'>Services</h2>
               <p className="border-t border-gray-600 my-3"></p>
-              <h3 className="text-xl font-bold mb-2">{selectedService.topic}</h3>
-              <img src={selectedService.image} alt={selectedService.topic} className="" />
+              <h3 className="text-2xl font-bold mb-2">{selectedService.topic}</h3>
+              <img src={selectedService.image} alt={selectedService.topic} className="w-[400px] my-5 rounded-sm" />
               <p className='w-full font-regular font text-lg'>{selectedService.description.paragraph1}</p>
-              <br />
+            <ul className='mb-5'>
+                {selectedService.points.map((point, index) => (
+                  <li key={index} className='text-lg '>{point} </li>
+                ))}
+              </ul>
               <p className='w-full font-regular font text-lg'>{selectedService.description.paragraph2}</p>
               <br />
               <p className='w-full font-regular font text-lg'>{selectedService.description.paragraph3}</p>
-              <ul>
-                {selectedService.points.map((point, index) => (
-                  <li key={index}>{point}</li>
-                ))}
-              </ul>
+              
             </div>
           </div>
         </div>

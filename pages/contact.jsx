@@ -1,30 +1,61 @@
 import React from "react";
-import styles from '../styles/Contact.module.css'
+import styles from "../styles/Contact.module.css";
 import RootLayout from "@/app/layout";
+import Image from "next/image";
 
 export default function Contact() {
-    return (
-        <RootLayout>
-            <div className="container mx-auto p-4">
-                <div className="mb-10">
-                    <h1 className="text-md font-bold">Home / Contact Us</h1>
+  return (
+    <RootLayout>
+      <div className="container mx-auto p-4">
+        <div className="mb-10">
+          <h1 className="text-md font-bold">Home / Contact Us</h1>
+        </div>
+        <div className="mb-10">
+          <div className="mb-4">
+            <h1 className="text-3xl font-bold">Contact Us</h1>
+            <div className="border border-gray-300 my-2"></div>
+          </div>
+          <p className="text-lg">
+            Begin the Dialogue<br></br>
+            Thank you for reaching out to us. Please complete the email form,
+            submit it, and we will get back to you at our earliest convenience.
+          </p>
+        </div>
 
-                </div>
-                <div className="mb-4">
-                    <div className="mb-4">
-                        <h1 className="text-3xl font-bold">Contact Us</h1>
-                        <div className="border border-gray-300 my-2"></div>
-                    </div>
-                    <p className="text-lg">Begin the Dialogue<br></br>
-                        Thank you for reaching out to us. Please complete the email form, submit it, and we will get back to you at our earliest convenience.</p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {/* Image (Mobile first) */}
-                    <div className="md:hidden">
+        {/* email and phone contacts */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Phone number */}
+          <div className="flex items-center">
+            <Image
+              src="/contact_us/phone.png"
+              alt="Description of your image"
+              width={16}
+              height={16}
+            />
+
+            <span className="ml-2">+1 301-591-0989 ext: 403</span>
+          </div>
+          {/* Email */}
+          <div className="flex items-center">
+            <Image
+              src="/contact_us/email.png"
+              alt="Description of your image"
+              width={20}
+              height={20}
+            />
+            <span className="ml-2">info@refyndata.com</span>
+          </div>
+          {/* Empty column */}
+          <div></div>
+        </div>
+
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> */}
+        {/* Image (Mobile first) */}
+        {/* <div className="md:hidden">
                         <img src="https://img.freepik.com/free-photo/contact-register-feedback-support-help-concept_53876-124243.jpg?size=626&ext=jpg&ga=GA1.1.494848340.1707655365&semt=ais" alt="Contact Us" className="w-full rounded-lg shadow-md" />
-                    </div>
-                    {/* Form */}
-                    <div className="border p-4">
+                    </div> */}
+        {/* Form */}
+        {/* <div className="border p-4">
                         <form>
                             <div className="mb-4">
                                 <label htmlFor="name" className="block mb-1">Name</label>
@@ -44,37 +75,56 @@ export default function Contact() {
                             </div>
                             <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
                         </form>
-                    </div>
-                    {/* Image (Tablet and Desktop) */}
-                    <div className="hidden md:block">
+                    </div> */}
+        {/* Image (Tablet and Desktop) */}
+        {/* <div className="hidden md:block">
                         <img src="https://img.freepik.com/free-photo/contact-register-feedback-support-help-concept_53876-124243.jpg?size=626&ext=jpg&ga=GA1.1.494848340.1707655365&semt=ais" alt="Contact Us" className="w-full rounded-lg shadow-md" />
                     </div>
-                </div>
+                </div> */}
 
-                {/*  Address and location*/}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 mt-20">
-                <div>
-                        <img src="vizak.webp" alt="nnovative Cente" className=" w-60 h-40 rounded-lg shadow-md mb-2" />
-                        <p className="text-xl font-semibold">Innovative Center</p>
-                        <p className="text-sm font-semibold">Visakhapatnam</p>
-                        <p className="text-sm">A-hub, Andhra University incubation center,<br></br> AU North Campus, Visakhapatnam, AP-530003 </p>
-                    </div>
-                    <div>
-                        <img src="vizak.webp" alt="nnovative Cente" className=" w-60 h-40 rounded-lg shadow-md mb-2" />
-                        <p className="text-xl font-semibold">Innovative Center</p>
-                        <p className="text-sm font-semibold">Visakhapatnam</p>
-                        <p className="text-sm">A-hub, Andhra University incubation center,<br></br> AU North Campus, Visakhapatnam, AP-530003 </p>
-                    </div>
-                    <div>
-                        <img src="vizak.webp" alt="nnovative Cente" className=" w-60 h-40 rounded-lg shadow-md mb-2" />
-                        <p className="text-xl font-semibold">Innovative Center</p>
-                        <p className="text-sm font-semibold">Visakhapatnam</p>
-                        <p className="text-sm">A-hub, Andhra University incubation center,<br></br> AU North Campus, Visakhapatnam, AP-530003 </p>
-                    </div>
-                </div>
-            </div>   
-        </RootLayout>
-    )
+        {/*  Address and location*/}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 mt-5">
+          <div>
+            <img
+              src="/contact_us/virginia_meryland.jpeg"
+              alt="nnovative Cente"
+              className=" w-60 h-40 rounded-lg shadow-md mb-2"
+            />
+            <p className="text-xl font-semibold">Registered Office:</p>
+            <p className="text-sm font-semibold">Clarksburg, West Virginia</p>
+            <p className="text-sm">
+            11504 ELKHORN DRIVE,CLARKSBURG-MD-20871{" "}
+            </p>
+          </div>
+          <div>
+            <img
+              src="/contact_us/cororate.png"
+              alt="nnovative Cente"
+              className=" w-60 h-40 rounded-lg shadow-md mb-2"
+            />
+            <p className="text-xl font-semibold">Corporate Office:</p>
+            <p className="text-sm font-semibold">Herndon,Virginia</p>
+            <p className="text-sm">
+            13800 Coppermine RD Suite #162,Herndon,VA-20171{" "}
+            </p>
+          </div>
+          <div>
+            <img
+              src="/contact_us/visakhapatnam.png"
+              alt="nnovative Cente"
+              className=" w-60 h-40 rounded-lg shadow-md mb-2"
+            />
+            <p className="text-xl font-semibold">Innovative Center:</p>
+            <p className="text-sm font-semibold">Visakhapatnam</p>
+            <p className="text-sm">
+              A-hub, Andhra University incubation center,<br></br> AU North
+              Campus, Visakhapatnam, AP-530003{" "}
+            </p>
+          </div>
+        </div>
+      </div>
+    </RootLayout>
+  );
 }
 
 // import React from 'react';

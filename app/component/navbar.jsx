@@ -105,8 +105,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto ">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <img className="block lg:hidden h-32 w-auto P-2" src="/refyndata_new_log.jpeg" alt="Logo" />
-            <img className="hidden lg:block h-32 w-auto P-2" src="/refyndata_new_log.jpeg" alt="Logo" />
+            <img className="block lg:hidden h-32 w-auto P-2" src="/navbar/Refyndata_logo.jpg" alt="Logo" />
+            <img className="hidden lg:block h-32 w-auto P-2" src="/navbar/Refyndata_logo.jpg" alt="Logo" />
           </div>
           <div className="flex items-center">
             <div className="hidden lg:flex space-x-4">
