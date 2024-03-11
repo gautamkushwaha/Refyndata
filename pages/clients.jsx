@@ -1,6 +1,7 @@
 // ClientSection.js
 import { useEffect, useState } from 'react';
 import RootLayout from "@/app/layout";
+import Image from "next/image";
 
 const logos = [
   { name: 'Client 1', logo: '/clients/amway.jpeg', alt: 'Client 1 Logo', name: "AMWAY" },
@@ -50,7 +51,7 @@ const ClientSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
           {logos.map((logo, index) => (
             <div key={index} className="flex flex-col items-center border p-5">
-              <img src={logo.logo} alt={logo.alt} className="max-h-24 md:max-h-32" />
+              <Image src={logo.logo} alt={logo.alt} className="max-h-24 md:max-h-32" />
               <div className="mt-auto text-center">
                 <p>{logo.name}</p>
               </div>

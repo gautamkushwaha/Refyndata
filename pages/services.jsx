@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import servicesData from '@/data/services.json';
 import RootLayout from '@/app/layout';
+import Image from "next/image";
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(servicesData.services[0]);
@@ -39,8 +40,11 @@ const Services = () => {
               <h2 className='text-3xl font-bold text-gray-800'>Services</h2>
               <p className="border-t border-gray-600 my-3"></p>
               <h3 className="text-2xl font-bold mb-2">{selectedService.topic}</h3>
-              <img src={selectedService.image} alt={selectedService.topic} className="w-[400px] my-5 rounded-sm" />
+              <p className='w-full font-regular font text-lg'>{selectedService.special_line}</p>
+              <Image src={selectedService.image} alt={selectedService.topic} className="w-[400px] my-5 rounded-sm" />
               <p className='w-full font-regular font text-lg'>{selectedService.description.paragraph1}</p>
+              <br/>
+              <p className='w-full font-regular font text-lg' >{selectedService.special_line2}</p>
             <ul className='mb-5'>
                 {selectedService.points.map((point, index) => (
                   <li key={index} className='text-lg '>{point} </li>

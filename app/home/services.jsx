@@ -1,5 +1,6 @@
 import styles from "@/styles/CartAnimation.module.css"; // Ensure you create and link this CSS file
 
+
 const CartAnimation = () => {
   return (
     <div>
@@ -140,7 +141,7 @@ const CartAnimation = () => {
             <button className="bg-blue-500 text-white border-none rounded-md p-[6px] mt-[10%]">More...</button>
           </div>
           <div className="absolute top-0 left-0 w-full h-full z-20 bg-blue-500 transition-all duration-500"></div>
-          <img src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
+          <Image src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
           <p >consultancy</p>
         </div>
         <div className="relative w-[300px] h-[400px] overflow-hidden cursor-pointer rounded-[30px]"> 
@@ -150,7 +151,7 @@ const CartAnimation = () => {
             <button className="bg-blue-500 text-white border-none rounded-md p-[6px] mt-[10%]">More...</button>
           </div>
           <div className="absolute top-0 left-0 w-full h-full z-20 bg-blue-500 transition-all duration-500"></div>
-          <img src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
+          <Image src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
           <p >consultancy</p>
         </div>
         <div className="relative w-[300px] h-[400px] overflow-hidden cursor-pointer rounded-[30px]"> 
@@ -160,7 +161,7 @@ const CartAnimation = () => {
             <button className="bg-blue-500 text-white border-none rounded-md p-[6px] mt-[10%]">More...</button>
           </div>
           <div className="absolute top-0 left-0 w-full h-full z-20 bg-blue-500 transition-all duration-500"></div>
-          <img src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
+          <Image src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
           <p >consultancy</p>
         </div>
         <div className="relative w-[300px] h-[400px] overflow-hidden cursor-pointer rounded-[30px]"> 
@@ -170,7 +171,7 @@ const CartAnimation = () => {
             <button className="bg-blue-500 text-white border-none rounded-md p-[6px] mt-[10%]">More...</button>
           </div>
           <div className="absolute top-0 left-0 w-full h-full z-20 bg-blue-500 transition-all duration-500"></div>
-          <img src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
+          <Image src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
           <p >consultancy</p>
         </div>
         <div className="relative w-[300px] h-[400px] overflow-hidden cursor-pointer rounded-[30px]"> 
@@ -180,7 +181,7 @@ const CartAnimation = () => {
             <button className="bg-blue-500 text-white border-none rounded-md p-[6px] mt-[10%]">More...</button>
           </div>
           <div className="absolute top-0 left-0 w-full h-full z-20 bg-blue-500 transition-all duration-500"></div>
-          <img src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
+          <Image src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
           <p >consultancy</p>
         </div>
         <div className="relative w-[300px] h-[400px] overflow-hidden cursor-pointer rounded-[30px]"> 
@@ -190,7 +191,7 @@ const CartAnimation = () => {
             <button className="bg-blue-500 text-white border-none rounded-md p-[6px] mt-[10%]">More...</button>
           </div>
           <div className="absolute top-0 left-0 w-full h-full z-20 bg-blue-500 transition-all duration-500"></div>
-          <img src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
+          <Image src="/hands.png" alt="Hands" class="absolute top-[20%] left-1/2 -translate-x-1/2 z-30 transition-transform duration-500" style={{transform: "scale(1);"}} />
           <p >consultancy</p>
         </div>
         

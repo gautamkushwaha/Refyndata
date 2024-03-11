@@ -9,10 +9,11 @@ const Footer = () => {
           {/* Column 1 */}
           <div className="  mb-4 md:mb-0">
             <h3 className=" text-2xl font-semibold mb-2">Refyndata</h3>
-            <img
+            <Image
               src="/footer/verify.png"
               alt="company_verification"
-              className="py-2 transform transition-transform hover:translate-y-[-2px]"
+              width={30}
+              height={15}
             />
             <p className="text-sm transform transition-transform hover:translate-y-[-2px]">
               With lots of unique blocks, you can easily build a page without
@@ -42,8 +43,8 @@ const Footer = () => {
           {/* Column 3 */}
           <div className="mb-4 md:mb-0 text-[#0B1320]">
             <h3 className="text-xl font-semibold mb-2">Contact</h3>
-            <p className="mb-2 transform transition-transform hover:translate-y-[-2px]">Email: info@gmail.com</p>
-            <p className="mb-2 transform transition-transform hover:translate-y-[-2px]">Contact: +91898888</p>
+            <p className="mb-2 transform transition-transform hover:translate-y-[-2px]">Email: info@refyndata.com</p>
+            <p className="mb-2 transform transition-transform hover:translate-y-[-2px]">Contact: +1 301-591-0989 ext: 403</p>
             <a href="#" className="transform transition-transform hover:translate-y-[-2px] mb-2 "> Write to Us
             </a>
           </div>

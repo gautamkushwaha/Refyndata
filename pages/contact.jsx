@@ -52,7 +52,7 @@ export default function Contact() {
         {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> */}
         {/* Image (Mobile first) */}
         {/* <div className="md:hidden">
-                        <img src="https://img.freepik.com/free-photo/contact-register-feedback-support-help-concept_53876-124243.jpg?size=626&ext=jpg&ga=GA1.1.494848340.1707655365&semt=ais" alt="Contact Us" className="w-full rounded-lg shadow-md" />
+                        <Image src="https://Image.freepik.com/free-photo/contact-register-feedback-support-help-concept_53876-124243.jpg?size=626&ext=jpg&ga=GA1.1.494848340.1707655365&semt=ais" alt="Contact Us" className="w-full rounded-lg shadow-md" />
                     </div> */}
         {/* Form */}
         {/* <div className="border p-4">
@@ -78,14 +78,14 @@ export default function Contact() {
                     </div> */}
         {/* Image (Tablet and Desktop) */}
         {/* <div className="hidden md:block">
-                        <img src="https://img.freepik.com/free-photo/contact-register-feedback-support-help-concept_53876-124243.jpg?size=626&ext=jpg&ga=GA1.1.494848340.1707655365&semt=ais" alt="Contact Us" className="w-full rounded-lg shadow-md" />
+                        <Image src="https://Image.freepik.com/free-photo/contact-register-feedback-support-help-concept_53876-124243.jpg?size=626&ext=jpg&ga=GA1.1.494848340.1707655365&semt=ais" alt="Contact Us" className="w-full rounded-lg shadow-md" />
                     </div>
                 </div> */}
 
         {/*  Address and location*/}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 mt-5">
           <div>
-            <img
+            <Image
               src="/contact_us/virginia_meryland.jpeg"
               alt="nnovative Cente"
               className=" w-60 h-40 rounded-lg shadow-md mb-2"
@@ -97,7 +97,7 @@ export default function Contact() {
             </p>
           </div>
           <div>
-            <img
+            <Image
               src="/contact_us/cororate.png"
               alt="nnovative Cente"
               className=" w-60 h-40 rounded-lg shadow-md mb-2"
@@ -109,7 +109,7 @@ export default function Contact() {
             </p>
           </div>
           <div>
-            <img
+            <Image
               src="/contact_us/visakhapatnam.png"
               alt="nnovative Cente"
               className=" w-60 h-40 rounded-lg shadow-md mb-2"
@@ -142,7 +142,7 @@ export default function Contact() {
 //       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 //         {/* Image (Mobile first) */}
 //         <div className="md:hidden">
-//           <img src="/contact_us_image.jpg" alt="Contact Us" className="w-full rounded-lg shadow-md" />
+//           <Image src="/contact_us_image.jpg" alt="Contact Us" className="w-full rounded-lg shadow-md" />
 //         </div>
 //         {/* Form */}
 //         <div className="border p-4">
@@ -168,7 +168,7 @@ export default function Contact() {
 //         </div>
 //         {/* Image (Tablet and Desktop) */}
 //         <div className="hidden md:block">
-//           <img src="/contact_us_image.jpg" alt="Contact Us" className="w-full rounded-lg shadow-md" />
+//           <Image src="/contact_us_image.jpg" alt="Contact Us" className="w-full rounded-lg shadow-md" />
 //         </div>
 //       </div>
 //     </div>
